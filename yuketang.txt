@@ -1,0 +1,21 @@
+//url = window.location.href
+//index = parseInt(url.substring(url.length-7,url.length))
+//prefix = url.substring(0,url.length-7)
+//
+//craps_event = new MouseEvent(typeArg, mouseEventInit);
+task = function(){
+    selector = $('xt-playbutton.xt_video_player_play_btn')
+    selector.click()
+    setInterval(function(){
+    progress = $('.progress-wrap > div:nth-child(1) > span:nth-child(2)').textContent
+    progressNow = parseInt(progress.replace(/[^0-9]/ig,""))
+    console.log(progress)
+    console.log(progressNow,progressNow>=92)
+    if(progressNow>=92){
+        //index = index+1
+        //window.location.href = (prefix+index)
+        $('span.f14:nth-child(1)').click()
+    }    
+    },2000);
+};
+task()
